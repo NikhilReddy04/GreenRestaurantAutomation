@@ -1,0 +1,21 @@
+<suite name="CrossBrowserSuite" parallel="tests" thread-count="2">
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.epam.devbistro.runners.UITestRunner"/>
+        </classes>
+    </test>
+
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="org.epam.devbistro.runners.UITestRunner"/>
+        </classes>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browser" value="MicrosoftEdge"/>
+        <classes>
+            <class name="org.epam.devbistro.runners.UITestRunner"/>
+        </classes>
+    </test>
+</suite>

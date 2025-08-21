@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AlitaSettings">
+    <option name="integrationName" value="alta-we-openai" />
+    <option name="integrationUid" value="5318b593-2a04-4275-a1af-b4770c28fbd2" />
+    <option name="llmModelName" value="gpt-4o" />
+    <option name="llmModelNames">
+      <set>
+        <option value="GPT_3_5_TURBO" />
+        <option value="gpt-4o" />
+        <option value="gpt-4o-2024-08-06" />
+      </set>
+    </option>
+    <option name="llmServerUrl" value="https://nexus.elitea.ai" />
+    <option name="projectId" value="1" />
+  </component>
+</project>

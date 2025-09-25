@@ -13,4 +13,5 @@ import io.cucumber.testng.CucumberOptions;
 )
 public class UITestRunner extends BaseTestRunner {
     // UI-specific configurations (if any) can go here
+
 }

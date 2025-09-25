@@ -16,7 +16,7 @@ public class DriverManager {
     private DriverManager() {}
 
     private static class Holder {
-        private static final DriverManager INSTANCE = new DriverManager();
+        private static final DriverManager INSTANCE =  new DriverManager();
     }
 
     public static DriverManager getInstance() {
@@ -24,6 +24,7 @@ public class DriverManager {
     }
 
     public void setDriver() {
+        System.out.println("hello");
         String browser = ConfigReader.get("browser");           // "chrome","microsoftEdge","firefox"
         String runMode = ConfigReader.get("runMode");           // "local", "remote", "browserstack"
         String browserstackUser = ConfigReader.get("bsUser");   // BrowserStack username
@@ -46,6 +47,8 @@ public class DriverManager {
             } catch (MalformedURLException e) {
                 throw new RuntimeException("Invalid Selenium Grid URL", e);
             }
+
+
 
         } else if ("browserstack".equalsIgnoreCase(runMode)) {
             try {
@@ -75,6 +78,7 @@ public class DriverManager {
             }
 
         } else { // local
+            System.out.println("Hello");
             WebDriver driver = BrowserFactory.createInstance(browser);
             threadLocalDriver.set(driver);
         }
@@ -89,6 +93,7 @@ public class DriverManager {
         if (driver != null) {
             driver.quit();
             threadLocalDriver.remove();
+
         }
     }
 }

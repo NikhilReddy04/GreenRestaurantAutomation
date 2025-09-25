@@ -30,6 +30,11 @@ public class NxtWaveSteps {
         Assert.assertTrue(driver.findElement(By.xpath("//button[normalize-space()='Shop Now']")).isDisplayed());
     }
 
+    @Then("User should not login")
+    public void userShouldNotLogin() {
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='error-message']")).isDisplayed());
+    }
+
     @When("User submits invalid credentials")
     public void userSubmitsInvalidCredentials() {
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("rahul");

@@ -28,20 +28,20 @@ Feature: Waiter Functionality
     Then The response status code should be 200
     And The response should contain a successful booking message
 
-#  Scenario Outline: Unsuccessful booking of a table by a waiter for a client
-#    Given Waiter wants to book a table for the client with invalid "<parameter>"
-#    When User sends a POST request to "/bookings/waiter"
-#    Then The response status code should be <statusCode>
-#    And The response should contain a message "<message>"
-#    Examples:
-#      | parameter       | message                                 | statusCode |
-#      | date            | Invalid date format. Expected yyyy-MM-dd| 400        |
-#      | past date       | Can't book in the past date             | 400        |
-#      | guestNumber     | Guest numbers must be greater than 0    | 400        |
-#      | locationId      | locationId doesn't exists!              | 400        |
-#      | tableNumber     | Table not found for location: loc123    | 400        |
-#      | incorrect email | Customer doesn't exist                  | 404        |
-#      | incorrect type  | client type can be either existing or visitor| 400        |
+  Scenario Outline: Unsuccessful booking of a table by a waiter for a client
+    Given Waiter wants to book a table for the client with invalid "<parameter>"
+    When User sends a POST request to "/bookings/waiter"
+    Then The response status code should be <statusCode>
+    And The response should contain a message "<message>"
+    Examples:
+      | parameter       | message                                 | statusCode |
+      | date            | Invalid date format. Expected yyyy-MM-dd| 400        |
+      | past date       | Can't book in the past date             | 400        |
+      | guestNumber     | Guest numbers must be greater than 0    | 400        |
+      | locationId      | locationId doesn't exists!              | 400        |
+      | tableNumber     | Table not found for location: loc123    | 400        |
+      | incorrect email | Customer doesn't exist                  | 404        |
+      | incorrect type  | client type can be either existing or visitor| 400        |
 
 
 

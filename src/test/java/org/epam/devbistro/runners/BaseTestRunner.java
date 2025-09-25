@@ -5,7 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        glue = "org.epam.devbistro.stepdefinitions", // Package for step definitions
+        glue ={"org.epam.devbistro.stepdefinitions",
+                "org.epam.devbistro.hooks"},
+        // Package for step definitions
         plugin = {
                 "pretty", // Prints readable output
                 "html:target/cucumber-reports.html", // Generates default HTML report

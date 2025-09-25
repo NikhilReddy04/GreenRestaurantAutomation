@@ -17,6 +17,7 @@ public class Hooks {
 
     @Before("@ui")
     public void setUp() {
+        System.out.println("Beginning ui");
         // Initialize WebDriver using DriverManager
         DriverManager.getInstance().setDriver();
         WebDriver driver = DriverManager.getInstance().getDriver();

@@ -1,0 +1,11 @@
+# Don’t use env files in Copilot context
+.env
+*.env
+
+
+# Don’t use config files in Copilot context
+.config
+*.config
+# Don’t include secrets/configs
+config/secrets.json
+private/*
